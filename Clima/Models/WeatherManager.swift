@@ -23,6 +23,11 @@ struct WeatherManager {
         performRequest(with: urlString)
     }
     
+    func fetchWeather(latitude: Double, longitude: Double) {
+        let urlString = "\(configModel.getWeatherBaseUrl())appid=\(configModel.getApiId())&lat=\(latitude)&lon=\(longitude)&units=metric"
+        performRequest(with: urlString)
+    }
+    
     private func performRequest(with urlString: String) {
         guard let url = URL(string: urlString) else { return }
         

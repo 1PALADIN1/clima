@@ -6,8 +6,9 @@
 //
 
 import UIKit
+import CoreLocation
 
-class MainViewController: UIViewController {
+class WeatherViewController: UIViewController {
     
     @IBOutlet weak var conditionImageView: UIImageView!
     @IBOutlet weak var temperatureLabel: UILabel!
@@ -15,6 +16,7 @@ class MainViewController: UIViewController {
     @IBOutlet weak var searchTextField: UITextField!
     
     private var weatherManager = WeatherManager()
+    private let locationManager = CLLocationManager()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -22,18 +24,15 @@ class MainViewController: UIViewController {
         
         searchTextField.delegate = self
         weatherManager.delegate = self
+        locationManager.delegate = self
+        
+        locationManager.requestWhenInUseAuthorization()
     }
-    
-    
-    
-    @IBAction func getCurrentLocationPressed(_ sender: UIButton) {
-    }
-    
 }
 
 //MARK: - UITextFieldDelegate
 
-extension MainViewController: UITextFieldDelegate {
+extension WeatherViewController: UITextFieldDelegate {
     @IBAction func searchPressed(_ sender: UIButton) {
         searchTextField.endEditing(true)
     }
@@ -64,7 +63,7 @@ extension MainViewController: UITextFieldDelegate {
 
 //MARK: - WeatherManagerDelegate
 
-extension MainViewController: WeatherManagerDelegate {
+extension WeatherViewController: WeatherManagerDelegate {
     func didUpdateWeather(_ weatherManager: WeatherManager, weather: WeatherModel) {
         DispatchQueue.main.async {
             self.temperatureLabel.text = weather.temperatureString
@@ -74,6 +73,37 @@ extension MainViewController: WeatherManagerDelegate {
     }
     
     func didFailWithError(error: Error) {
+        print(error)
+    }
+}
+
+//MARK: - CLLocationManagerDelegate
+
+extension WeatherViewController: CLLocationManagerDelegate {
+    
+    @IBAction func getCurrentLocationPressed(_ sender: UIButton) {
+        if CLLocationManager.authorizationStatus() == .authorizedWhenInUse
+            || CLLocationManager.authorizationStatus() == .authorizedAlways {
+            locationManager.requestLocation()
+        }
+    }
+    
+    func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
+        if let location = locations.last {
+            locationManager.stopUpdatingLocation()
+            let lat = location.coordinate.latitude
+            let lon = location.coordinate.longitude
+            weatherManager.fetchWeather(latitude: lat, longitude: lon)
+        }
+    }
+    
+    func locationManager(_ manager: CLLocationManager, didChangeAuthorization status: CLAuthorizationStatus) {
+        if status == .authorizedWhenInUse || status == .authorizedAlways {
+            locationManager.requestLocation()
+        }
+    }
+    
+    func locationManager(_ manager: CLLocationManager, didFailWithError error: Error) {
         print(error)
     }
 }
