@@ -17,6 +17,9 @@ class MainViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+        
+        let w = WeatherManager()
+        w.fetchWeather(for: "Moscow")
     }
     
     @IBAction func searchPressed(_ sender: UIButton) {
