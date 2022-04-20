@@ -36,6 +36,9 @@
                                                 <buttonConfiguration key="configuration" style="plain">
                                                     <backgroundConfiguration key="background" image="location.circle.fill" catalog="system"/>
                                                 </buttonConfiguration>
+                                                <connections>
+                                                    <action selector="getCurrentLocationPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="2Dm-Gg-gim"/>
+                                                </connections>
                                             </button>
                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Search" textAlignment="right" clearsOnBeginEditing="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="jPl-if-YwC">
                                                 <rect key="frame" x="50" y="0.0" width="274" height="40"/>
@@ -53,6 +56,9 @@
                                                 <buttonConfiguration key="configuration" style="plain">
                                                     <backgroundConfiguration key="background" image="magnifyingglass" catalog="system"/>
                                                 </buttonConfiguration>
+                                                <connections>
+                                                    <action selector="searchPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="6vE-0X-CxC"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                         <constraints>
@@ -67,40 +73,37 @@
                                             <constraint firstAttribute="width" constant="120" id="ztU-uJ-wTk"/>
                                         </constraints>
                                     </imageView>
-                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="-15" translatesAutoresizingMaskIntoConstraints="NO" id="gES-Qg-HjV">
-                                        <rect key="frame" x="142" y="180" width="232" height="105"/>
+                                    <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gES-Qg-HjV">
+                                        <rect key="frame" x="196.5" y="180" width="177.5" height="95.5"/>
                                         <subviews>
-                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="21" borderStyle="roundedRect" textAlignment="right" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ara-cX-nBg">
-                                                <rect key="frame" x="0.0" y="0.0" width="121" height="105"/>
-                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="21" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CzY-j4-ysN">
+                                                <rect key="frame" x="0.0" y="0.0" width="93" height="95.5"/>
                                                 <fontDescription key="fontDescription" type="system" weight="black" pointSize="80"/>
-                                                <textInputTraits key="textInputTraits"/>
-                                            </textField>
-                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="°" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="5NG-JN-vyB">
-                                                <rect key="frame" x="106" y="0.0" width="59" height="105"/>
-                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="°" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LeW-5c-5nw">
+                                                <rect key="frame" x="93" y="0.0" width="30.5" height="95.5"/>
                                                 <fontDescription key="fontDescription" type="system" weight="light" pointSize="80"/>
-                                                <textInputTraits key="textInputTraits"/>
-                                            </textField>
-                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="C" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="FSr-m7-5qc">
-                                                <rect key="frame" x="150" y="0.0" width="82" height="105"/>
-                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="C" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Cs6-Kj-IoS">
+                                                <rect key="frame" x="123.5" y="0.0" width="54" height="95.5"/>
                                                 <fontDescription key="fontDescription" type="system" weight="light" pointSize="80"/>
-                                                <textInputTraits key="textInputTraits"/>
-                                            </textField>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
                                         </subviews>
                                     </stackView>
-                                    <textField opaque="NO" contentMode="left" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="London" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="cSk-oU-r6m">
-                                        <rect key="frame" x="248" y="295" width="126" height="40"/>
-                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="40" id="iXd-pk-1ge"/>
-                                        </constraints>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="London" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5mn-KQ-0Jj">
+                                        <rect key="frame" x="276" y="285.5" width="98" height="36"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="30"/>
-                                        <textInputTraits key="textInputTraits"/>
-                                    </textField>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Zww-cx-iDm">
-                                        <rect key="frame" x="134" y="345" width="240" height="453"/>
+                                        <rect key="frame" x="134" y="331.5" width="240" height="466.5"/>
                                     </view>
                                 </subviews>
                                 <constraints>
@@ -122,6 +125,12 @@
                             <constraint firstItem="DFw-Hj-KMC" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="xOk-Sf-z58"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="cityLabel" destination="5mn-KQ-0Jj" id="QOU-p9-anQ"/>
+                        <outlet property="conditionImageView" destination="ysX-6P-P4S" id="Yko-aD-QQu"/>
+                        <outlet property="searchTextField" destination="jPl-if-YwC" id="A9O-2e-wwy"/>
+                        <outlet property="tempertureLabel" destination="CzY-j4-ysN" id="ok0-Nj-fCl"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
