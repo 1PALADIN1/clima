@@ -13,6 +13,9 @@
 		490FCA05280F46E100F9AF3C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 490FCA03280F46E100F9AF3C /* Main.storyboard */; };
 		490FCA07280F46E300F9AF3C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 490FCA06280F46E300F9AF3C /* Assets.xcassets */; };
 		490FCA0A280F46E300F9AF3C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 490FCA08280F46E300F9AF3C /* LaunchScreen.storyboard */; };
+		495E4E622811C43E0061FB2A /* api_key.png in Resources */ = {isa = PBXBuildFile; fileRef = 495E4E612811C43E0061FB2A /* api_key.png */; };
+		495E4E642811C5610061FB2A /* config.png in Resources */ = {isa = PBXBuildFile; fileRef = 495E4E632811C5610061FB2A /* config.png */; };
+		495E4E662811C8C10061FB2A /* type_city.gif in Resources */ = {isa = PBXBuildFile; fileRef = 495E4E652811C8C10061FB2A /* type_city.gif */; };
 		49A31DA628109758006769B9 /* ConfigModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49A31DA528109758006769B9 /* ConfigModel.swift */; };
 		49A31DA828109775006769B9 /* ConfigData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49A31DA728109775006769B9 /* ConfigData.swift */; };
 		49A31DAA281097F3006769B9 /* Config.plist in Resources */ = {isa = PBXBuildFile; fileRef = 49A31DA9281097F3006769B9 /* Config.plist */; };
@@ -30,6 +33,10 @@
 		490FCA06280F46E300F9AF3C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		490FCA09280F46E300F9AF3C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		490FCA0B280F46E300F9AF3C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		495E4E5F2811C0330061FB2A /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		495E4E612811C43E0061FB2A /* api_key.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = api_key.png; sourceTree = "<group>"; };
+		495E4E632811C5610061FB2A /* config.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = config.png; sourceTree = "<group>"; };
+		495E4E652811C8C10061FB2A /* type_city.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = type_city.gif; sourceTree = "<group>"; };
 		49A31DA528109758006769B9 /* ConfigModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfigModel.swift; sourceTree = "<group>"; };
 		49A31DA728109775006769B9 /* ConfigData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfigData.swift; sourceTree = "<group>"; };
 		49A31DA9281097F3006769B9 /* Config.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Config.plist; sourceTree = "<group>"; };
@@ -52,6 +59,8 @@
 		490FC9F1280F46E100F9AF3C = {
 			isa = PBXGroup;
 			children = (
+				495E4E602811C0810061FB2A /* Docs */,
+				495E4E5F2811C0330061FB2A /* README.md */,
 				490FC9FC280F46E100F9AF3C /* Clima */,
 				490FC9FB280F46E100F9AF3C /* Products */,
 			);
@@ -95,6 +104,16 @@
 				490FCA08280F46E300F9AF3C /* LaunchScreen.storyboard */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		495E4E602811C0810061FB2A /* Docs */ = {
+			isa = PBXGroup;
+			children = (
+				495E4E652811C8C10061FB2A /* type_city.gif */,
+				495E4E632811C5610061FB2A /* config.png */,
+				495E4E612811C43E0061FB2A /* api_key.png */,
+			);
+			path = Docs;
 			sourceTree = "<group>";
 		};
 		49A31DA328109726006769B9 /* Models */ = {
@@ -177,8 +196,11 @@
 			files = (
 				49A31DAA281097F3006769B9 /* Config.plist in Resources */,
 				490FCA0A280F46E300F9AF3C /* LaunchScreen.storyboard in Resources */,
+				495E4E622811C43E0061FB2A /* api_key.png in Resources */,
 				490FCA07280F46E300F9AF3C /* Assets.xcassets in Resources */,
 				490FCA05280F46E100F9AF3C /* Main.storyboard in Resources */,
+				495E4E662811C8C10061FB2A /* type_city.gif in Resources */,
+				495E4E642811C5610061FB2A /* config.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
